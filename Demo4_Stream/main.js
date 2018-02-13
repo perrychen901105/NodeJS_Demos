@@ -7,5 +7,7 @@ const inStream = new Readable({
     }
   }
 });
-inStream.currentCharCode = 65;
+// inStream.currentCharCode = 1;
 inStream.pipe(process.stdout);
+inStream.currentCharCode = 65;
+// inStream.pipe(process.stdout);
