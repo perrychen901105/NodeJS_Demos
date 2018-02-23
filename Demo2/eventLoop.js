@@ -10,3 +10,8 @@ var connectHandler = function connected() {
 
   eventEmitter.emit('data_received');
 }
+
+eventEmitter.on('click', '.selector', function(event) {
+  event.preventDefault();
+  /* Act on the event */
+});
