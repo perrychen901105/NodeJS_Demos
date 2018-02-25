@@ -10,3 +10,14 @@ var connectHandler = function connected() {
 
   eventEmitter.emit('data_received');
 }
+
+// Bind the connection event with the handler
+eventEmitter.on("connection", connectHandler);
+
+eventEmitter.on('data_received', function(){
+	console.log("data received successfully.");
+});
+
+eventEmitter.emit('connection');
+
+console.log('Program ended');
