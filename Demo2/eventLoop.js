@@ -11,6 +11,7 @@ var connectHandler = function connected() {
   eventEmitter.emit('data_received');
 }
 
+
 // Bind the connection event with the handler
 eventEmitter.on("connection", connectHandler);
 
@@ -21,3 +22,8 @@ eventEmitter.on('data_received', function(){
 eventEmitter.emit('connection');
 
 console.log('Program ended');
+
+eventEmitter.on('click', '.selector', function(event) {
+  event.preventDefault();
+  /* Act on the event */
+});
